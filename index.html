@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventura do Saber - Economia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <img id="start-image" src="minhaimagem.jpg" alt="Aventura do Saber - Economia">
+        <h1 class="game-title">Aventura do Saber - Economia</h1>
+        <p id="introduction">Bem-vindo à Aventura do Saber! Você está pronto para testar seus conhecimentos no âmbito da disciplina de Economia?</p>
+        <button id="start-button" class="btn">Iniciar o Jogo</button>
+        <div id="question-container" class="hide">
+            <p id="question-text">Carregando...</p>
+            <div id="answer-buttons" class="btn-container hide"></div>
+        </div>
+        <div id="score" class="hide">Pontuação: <span id="score-value">0</span></div>
+        <div id="time-container" class="hide">Tempo: <span id="timer-value">0:30</span></div>
+        <div id="timer-bar" class="hide"></div>
+        <button id="next-button" class="btn hide">Próxima Pergunta</button>
+        <div id="game-over" class="hide game-over-animation">
+            <h2>Fim do Jogo!</h2>
+            <p id="final-score">Sua pontuação final: <span id="final-score-value">0</span></p>
+            <div id="trophy-container" class="hide">
+                <img src="trophy-expert.png" alt="Trophy" id="trophy-image">
+                <p id="trophy-message"></p>
+            </div>
+            <button id="restart-button" class="btn restart-btn">Reiniciar Jogo</button>
+        </div>
+        <div id="feedback-icons" class="hide"></div>
+        <div id="statistics" class="hide">
+            <p>Pontuação Total: <span id="total-score">0</span></p>
+            <p>Perguntas Respondidas Corretamente: <span id="correct-answers">0</span></p>
+        </div>
+        <audio id="correct-sound" src="correct.mp3"></audio>
+        <audio id="wrong-sound" src="wrong.mp3"></audio>
+        <audio id="background-music" src="background-music.mp3" loop></audio>
+        <audio id="applause-sound" src="applause.mp3"></audio>
+        <audio id="cheers-sound" src="cheers.mp3"></audio>
+        <audio id="encouragement-sound" src="encouragement.mp3"></audio>
+        <audio id="zero-score-sound" src="zero-score.mp3"></audio>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
