@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#game-container {
+    text-align: center;
+}
+
+.game-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    width: 60%;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.correct-answer {
+    background-color: #28a745 !important;
+}
+
+.wrong-answer {
+    background-color: #dc3545 !important;
+}
+
+#timer-bar {
+    height: 5px;
+    background-color: #007bff;
+    margin-top: 10px;
+}
+
+#game-over {
+    animation-duration: 2s;
+}
+
+.game-over-animation {
+    animation-name: slideIn;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+#feedback-icons {
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+#statistics {
+    margin-top: 20px;
+}
+
+#statistics p {
+    font-size: 1.2rem;
+    margin: 5px;
+}
+
+#statistics p span {
+    font-weight: bold;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Estilo para ocultar a imagem específica */
+#zero-score-image {
+    display: none;
+}
+
+/* Hide the "Start Game" button after the game starts */
+#start-button.hide {
+    display: none;
+}
+
+/* Show the "Next Question" button after the game starts */
+#next-button {
+    display: none;
+}
+
+/* Estilos para mensagens de troféu */
+#trophy-message {
+    font-size: 1.5rem; /* Ajusta o tamanho da fonte */
+    font-weight: bold; /* Adiciona negrito para destacar a mensagem */
+    margin-top: 10px; /* Adiciona espaço extra acima da mensagem */
+}
+
+#question-text {
+    font-size: 1.3rem; /* Ajuste o tamanho da fonte conforme necessário */
+    margin-bottom: 20px; /* Adiciona espaço extra abaixo da pergunta */
+}
+
+/* Estilo para o tamanho da fonte das respostas */
+.btn-container button {
+    font-size: 1.2rem; /* Tamanho da fonte aumentado */
+}
+
+/* Adicione estilos para a introdução */
+#introduction {
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+    color: #4133ff; /* Define a cor do texto */
+    margin-bottom: 20px; /* Adiciona espaço abaixo da introdução */
+}
+
+/* Estilo para o título do jogo */
+.game-title {
+    color: #001f3f; /* Define a cor do texto como azul escuro */
+}
+
+ /* Estilo para a animação do botão */
+ @keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#answer-buttons {
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo das opções de resposta */
+}
+
+#score,
+#time-container {
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo da pontuação e do tempo */
+}
+
+#score,
+#time-container span {
+    font-size: 1.2rem; /* Ajusta o tamanho do texto da pontuação e do tempo */
+}
+
+@keyframes alert {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.alert-animation {
+    animation: alert 0.5s infinite alternate; /* Aplica a animação de alerta */
+}
+
+/* Estilo para o botão */
+#start-button {
+    animation: pulse 2s infinite; /* Aplica a animação "pulse" ao botão */
+}
+
+.restart-btn {
+    animation: pulse 2s infinite; /* Aplica a animação "pulse" ao botão de reiniciar jogo */
+}
